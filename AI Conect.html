@@ -1,0 +1,1094 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI CONNECT</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, sans-serif;
+            background-image: url('https://export-download.canva.com/_noxg/DAGEuU_noxg/2/0/0001-403499572321177912.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20240508%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240508T183227Z&X-Amz-Expires=60331&X-Amz-Signature=756fc8a50f511d1fc8e612065c5873eff32c0746bc7e95b5f5b497c7055b5218&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Thu%2C%2009%20May%202024%2011%3A17%3A58%20GMT');
+        }
+
+        .gif-portada {
+            background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmRrbndoeGV4MGVlNGlpeDUzcHF6aXZsaGtvdDZ5YnB4YWdpNWhldiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KX5nwoDX97AtPvKBF6/giphy.gif'); /* Gif de tecnología */
+            background-size: cover;
+            height: 100vh; /* Altura de la portada */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+
+        .titulo {
+            font-size: 100px; /* Tamaño del título */
+            color: #6549d3; /* Morado */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px #000000; /* Sombra para resaltar el texto */
+        }
+
+        .slogan {
+            font-size: 32px; /* Tamaño de fuente */
+            color: #0b72b9; /* Azul */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000; /* Sombra para resaltar el texto */
+        }
+
+        .indice {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .categoria {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            margin: 10px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-shadow: 2px 2px 4px #000000; /* Sombra para resaltar el texto */
+            border: 2px solid black; /* Borde negro alrededor del texto */
+        }
+
+            .categoria span {
+                position: absolute; /* Posición absoluta para los títulos */
+                bottom: 10px; /* Ajustar la posición vertical */
+                left: 0; /* Centrar horizontalmente */
+                right: 0;
+                text-align: center;
+                z-index: 1; /* Asegurar que esté encima de la imagen */
+            }
+
+            .categoria:hover {
+                background-color: rgba(255, 255, 255, 1);
+            }
+
+        .arrow-up {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+            .arrow-up img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #6549d3; /* Morado */
+                padding: 10px;
+                cursor: pointer;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            }
+
+                .arrow-up img:hover {
+                    background-color: #0b72b9; /* Azul */
+                }
+
+        .ejemplos {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+    <body>
+        <div class="gif-portada" id="gif-portada">
+
+            <div class="header">Victoria Furtuna</div>
+
+            <h1 class="titulo" id="titulo">AI CONNECT</h1>
+            <div class="slogan">Conectando el mundo a través del poder de la inteligencia artificial</div>
+        </div>
+
+        <div class="indice">
+            <a href="#chatbots">
+                <div class="categoria" style="background-image: url(Imagen1.jpg)">
+                    <span> Chatbots y asistentes </span>
+                </div>
+            </a>
+            <a href="#herramientas-textos">
+                <div class="categoria" style="background-image: url(Imagen2.jpg)">
+                    <span>Herramientas para textos</span>
+                </div>
+            </a>
+            <a href="#generacion-imagenes">
+                <div class="categoria" style="background-image: url(Imagen3.jpg)">
+                    <span>Generación de imágenes</span>
+                </div>
+            </a>
+            <a href="#edicion-video">
+                <div class="categoria" style="background-image: url(Imagen4.jpg)">
+                    <span>Edición de video</span>
+                </div>
+            </a>
+            <a href="#edicion-audio">
+                <div class="categoria" style="background-image: url(Imagen5.jpg)">
+                    <span>Edición de audio</span>
+                </div>
+            </a>
+            <a href="#presentaciones">
+                <div class="categoria" style="background-image: url(Imagen6.jpg)">
+                    <span>Trabajo y productividad</span>
+                </div>
+            </a>
+        </div>
+            <div id="chatbots" class="ejemplos">
+                <h2>CHATBOTS Y ASISTENTES</h2>
+                <div class="ejemplos" id="codigo">
+                    <h3>CHATGPT</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/2048px-ChatGPT_logo.svg.png" alt="Imagen" style="float: left; margin-right: 20px;" width="70">
+                    <p> ChatGPT es un modelo de lenguaje desarrollado por OpenAI que utiliza inteligencia artificial para generar respuestas y conversaciones basadas en el contexto proporcionado por el usuario </p>
+                    <a href="https://chatgpt.com/auth/login?sso=&oai-dm=1">Acceder</a>
+
+                </div>
+
+                <div class="ejemplos">
+                    <h3>COPILOT</h3>
+
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Microsoft_365_Copilot_Icon.svg/2048px-Microsoft_365_Copilot_Icon.svg.png" alt="Imagen" style="float: left; margin-right: 20px;" width="70">
+                    <p>Copilot de Microsoft 365 es una herramienta que ofrece asistencia al usuario en la escritura, edición, resumen y creación de documentos </p>
+                    <a href="https://copilot.microsoft.com/?form=MA13FV">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>REPLIKA</h3>
+                    <img src="https://1716637182.rsc.cdn77.org/web/main-page/replika_og_image.png" alt="Imagen" style="float: left; margin-right: 20px;" width="120">
+                    <p>Replika es una aplicación que se presenta como tu amigo de Inteligencia artificial y consiste en un chatbot, es decir, un robot cuya función es chatear con los usuarios </p>
+                    <a href="https://replika.com/">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>ZENOCHAT</h3>
+                    <img src="https://storage.tally.so/cd2f649f-065a-4c80-b8d6-1a17a68c2dc8/logo_square_512.png" alt="Imagen" style="float: left; margin-right: 20px;" width="80">
+                    <p>
+                        ZenoChat es la puerta de entrada a tu compañero personal de IA. Zeno utiliza el procesamiento del lenguaje natural (NLP) y el aprendizaje automático para comprender y responder a los usuarios de forma inteligente
+                    </p>
+                    <a href="https://textcortex.com/es/templates/zeno-chat-gpt-alternative">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>GEMINI</h3>
+
+                    <img src="https://media.licdn.com/dms/image/D5612AQG9Nqvmoflq0w/article-cover_image-shrink_720_1280/0/1701946062293?e=2147483647&v=beta&t=twRjPJKC7J3jKxyHrsjWIle1XExVugMq8WCXwxkjuj0" alt="Imagen" style="float: left; margin-right: 20px;" width="150">
+
+                    <p>Gemini es un modelo de IA multimodal. Es decir, es capaz de "generalizar y comprender, operar y combinar a la perfección distintos tipos de información", desde texto y audio hasta imágenes y vídeo, pasando por lenguajes de código </p>
+                    <a href="https://gemini.google.com/?utm_source=google&utm_medium=cpc&utm_campaign=2024esES_gemfeb&gad_source=1&gclid=CjwKCAjwouexBhAuEiwAtW_Zx5Zy8yiIRA9lO9uXSSJrxbzYTI8Pz8KLMMrZGtqgxIo0Rp0TBPjkJBoCXdYQAvD_BwE">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>CHATPDF</h3>
+
+                    <img src="https://miro.medium.com/v2/resize:fit:1080/1*ef_1F5jYjTPNPQ-3wRJ5vg.jpeg" alt="Imagen" style="float: left; margin-right: 20px;" width="60">
+
+                    <p>
+                        Conversa con tus PDFs como si fueran personas, hazle preguntas, pídele resumenes, etc.
+                    </p>
+                    <a href="https://www.chatpdf.com/">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>PDF AI</h3>
+
+                    <img src="https://www.toolpilot.ai/cdn/shop/files/863c052e038aac4e92170e1a0384f1e4.jpg?v=1694420062" alt="Imagen" style="float: left; margin-right: 20px;" width="60">
+
+                    <p> Conversa con tus PDFs como si fueran personas, hazle preguntas, pídele resumenes, etc. </p>
+                    <a href="https://pdf.ai/">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>HUMATA</h3>
+
+                    <img src="https://mmmacademy.es/wp-content/uploads/2023/07/Humata-scaled.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="180">
+
+                    <p> Conversa con tus documentos como si fueran personas, hazle preguntas, pídele resumenes, etc. </p>
+                    <a href="https://www.humata.ai/">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>ASK YOUR PDF</h3>
+                    <img src="https://assets-global.website-files.com/64f605bdfa749671fed117a9/6511d3fa7f1d03a78295be9b_Ask%20Your%20PDF.png" alt="Imagen de un gato" style="float: left; margin-right: 20px;" width="70">
+                    <p> Conversa con tus PDFs como si fueran personas, hazle preguntas, pídele resumenes, etc. </p>
+                    <a href="https://askyourpdf.com/es">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>PERPLEXITY</h3>
+
+                    <img src="https://assets.bizclikmedia.net/1800/b9c92286e658119663b97a2267aee9d1:0006bf344b145b7046bf9b5f43b7a786/perplexity-logo.webp" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+                    <p> Recibe respuestas instantáneas e información sobre cualquier tema, con fuentes actualizadas.  </p>
+                    <a href="https://www.perplexity.ai/">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>YOUTUBE SUMMARY</h3>
+
+                    <img src="https://i.ytimg.com/vi/7HZwm550c2o/maxresdefault.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="120">
+
+                    <p> Estas extensiones de Google Chrome transcriben y resumen los videos de YouTube.  </p>
+                    <a href="https://chrome.google.com/webstore/detail/unlimited-summary-generat/eelolnalmpdjemddgmpnmobdhnglfpje">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>PROPROMPT</h3>
+
+                    <img src="https://flowgpt.com/_next/image?url=https%3A%2F%2Fimage-cdn.flowgpt.com%2Favatars%2FnJXpsWrFkTdvUXdueEK73%2F1700389945361&w=2250&q=75" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+                    <p> Herramienta que te ayuda a mejorar las instrucciones que le das a ChatGPT y obtener mejores resultados.  </p>
+                    <a href="https://andreaoviedov.com/herramientas/proprompt/">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>SNACK PROMPT</h3>
+
+                    <img src="https://yt3.googleusercontent.com/v1H0DDrt3ZwJ43fr-0XJldocT4A0LDEfXp4wv_TtUo_4UhSIEITp5qHcuk33-FEpmNKsfIyNrHE=s900-c-k-c0x00ffffff-no-rj" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+                    <p> Sitio web que reúne los mejores prompts para ChatGPT organizados por categorías. La mayoría están en inglés pero puedes especificar el idioma de salida cuando los utilizas como plantilla. </p>
+                    <a href="https://snackprompt.com/">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>YATTER</h3>
+
+                    <img src="https://recursos.ai/content/images/2023/06/YatterPlus.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="190">
+
+                    <p> Accede a ChatGPT desde tu whatsapp. </p>
+                    <a href="https://yatter.in/">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>TIDIO</h3>
+
+                    <img src="https://play-lh.googleusercontent.com/5-eR3PalWOR2dp-Kr--rNi_uqeE7OUfmxPugO6QNxGpq-MMqkMNHe2f0Osair0nxHyg" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+                    <p>
+                        Tidio es una plataforma de chat en vivo y chatbot que ayuda a las empresas a comunicarse con los visitantes de su sitio web de manera efectiva. Ofrece funciones como chat en vivo, automatización de mensajes, integración con CRM y análisis de conversaciones para mejorar la atención al cliente y aumentar las ventas en línea
+                    </p>
+                    <a href="https://www.tidio.com/chatbot-ai/?a_bucket=sem&a_source=google&a_g_campaignid=21143867706&a_g_keyword=helpdesk%20ai%20bot&a_g_creative=695572931697&a_type=non-brand&utm_source=google&utm_medium=cpc&utm_campaign=21143867706&utm_term=helpdesk%20ai%20bot&hsa_acc=1286770856&hsa_cam=21143867706&hsa_grp=161608140618&hsa_ad=695572931697&hsa_src=g&hsa_tgt=kwd-1296818848042&hsa_kw=helpdesk%20ai%20bot&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gbraid=0AAAAADRcL55erYjec7HeH9y6ziUfBfFye&gclid=CjwKCAjw3NyxBhBmEiwAyofDYQX7HGm_6HY70PrS4Fqco3y05Epw7cDh6r0DQvmzL6n7VVVkknQjFxoCegMQAvD_BwE">Acceder</a>
+                </div>
+
+                <div class="ejemplos">
+                    <h3>ZENDESK</h3>
+
+                    <img src="https://729solutions.com/static/55041f38c92f76cc09bd614aac4e7097/Zendesk_sq-1.png" alt="Imagen" style="float: left; margin-right: 20px;" width="80">
+
+                    <p>Zendesk es un software de soporte, ventas e interacción con el cliente flexible y escalable. La plataforma sirve para todo tipo de empresas: grandes, medianas, pequeñas y startups</p>
+                    <a href="https://www.zendesk.es/">Acceder</a>
+                </div>
+
+            <h1>COMO APROVECHAR CHATGPT AL MÁXIMO </h1>
+
+            <!-- Video -->
+            <video width="640" height="360" controls>
+                <source src="Video1.mp4" type="video/mp4">
+            </video>
+
+    </div>
+
+    <div id="herramientas-textos" class="ejemplos">
+        <h2>HERRAMIENTAS PARA TEXTOS</h2>
+        <div class="ejemplos">
+
+            <h3>GRAMMARLY</h3>
+
+            <img src="https://e7.pngegg.com/pngimages/891/529/png-clipart-grammarly-icon-logo-social-media-icons.png" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+            <p> Corrige la ortografía y la gramática de los textos en inglés. </p>
+            <a href="https://www.grammarly.com/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>COPY</h3>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa_8CybWNSq7xz1qCHybfuC5jF60JPvB7Nug7n8zVPKQ&s" alt="Imagen" style="float: left; margin-right: 20px;" width="80">
+
+            <p> Crea contenidos en texto en segundos para publciaciones de redes sociales, blogs, correos electrónicos y más. </p>
+            <a href="https://www.copy.ai/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>QUILLBOT</h3>
+
+            <img src="https://1000logos.net/wp-content/uploads/2023/11/QuillBot-Logo.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+            <p> Mejora tus textos a través de la corrección de gramática y el parafraseo de las oraciones. </p>
+            <a href="https://quillbot.com/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>WRITESONIC</h3>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAPHn22eq3ZZpyqogZZ3eWS16ZxOGBDE4WUmfquG9kfw&s" alt="Imagen" style="float: left; margin-right: 20px;" width="140">
+
+            <p> Genera textos para blogs, anuncios, correos electrónicos y sitios web. </p>
+            <a href="https://writesonic.com/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>GLASP</h3>
+
+            <img src="https://todointeligenciaartificial.com/wp-content/uploads/2023/08/Glasp-AI-Logo-Inteligencia-Artificial.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="200">
+
+            <p>Toma notas y añade elementos destacados a las páginas web. </p>
+            <a href="https://glasp.co/login">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>DEEPL</h3>
+
+            <img src="https://static.deepl.com/img/favicon/automatic_social_share_deepl.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="130">
+
+            <p> Traductor que promete ser 3 veces más preciso que cualquier otro, por su entrenamiento con redes neuronales. </p>
+            <a href="https://www.deepl.com/translator">Acceder</a>
+        </div>
+
+    </div>
+
+    <div id="generacion-imagenes" class="ejemplos">
+        <h2>GENERACIÓN DE IMÁGENES</h2>
+
+        <div class="ejemplos">
+            <h3>COPILOT DESIGNER</h3>
+
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/J42QTTEY3VHKFGWKXLKYYUKPKM.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="120">
+
+            <p> Crea imágenes a partir de la descripción en texto que ingreses. </p>
+            <a href="https://www.bing.com/images/create">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>YOUCAM AI PRO</h3>
+
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d2/70/77/d270774e-4712-e29d-2ba6-ff337580e2c5/AppIcon-0-0-1x_U007ephone-0-85-220.png/1200x630wa.png" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+            <p> YouCam AI Pro crea imagenes IA apartir de texto o de fotos subidas por ti.</p>
+            <a href="https://www.perfectcorp.com/es/consumer/apps/yca">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>CANVA</h3>
+
+            <img src="https://i.pcmag.com/imagery/reviews/05GF8sMpHfawiyKgGnrgf7X-8.fit_scale.size_760x427.v1665503374.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="140">
+
+            <p> Ahora Canva te permite generar textos, eliminar objetos en fotografías, crear imágenes a partir de textos, entre muchas otras funciones gracias a la Inteligencia Artificial. Se requiere una cuenta Pro, la cual es gratis para profesores. </p>
+            <a href="https://www.canva.com/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>STABLE DIFFUSION</h3>
+
+            <img src="https://assets.anakin.ai/blog/2024/03/23q1_27_main.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="120">
+
+            <p> Crea imágenes a partir de la descripción en texto que ingreses. </p>
+            <a href="https://stablediffusionweb.com/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>PADLET</h3>
+
+            <img src="https://www.upv.es/contenidos/adigital/wp-content/uploads/2023/04/padlet_logo_with_name11.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="160">
+
+            <p> Padlet es un tablero colaborativo, recientemente integró una función de inteligencia artificial para crear imágenes a partir de la descripción en texto que ingreses. Se encuentra al crear una publicación, en Más opciones -> No sé dibujar. </p>
+            <a href="https://padlet.com/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>FLAIR</h3>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFbKlA7tDM7NIQDwvqmOoaptHp_ZfFlYqUrD06d6o8&s" alt="Imagen" style="float: left; margin-right: 20px;" width="230">
+
+            <p> Crea diseños para promocionar productos y servicios. </p>
+            <a href="https://flair.ai/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>MONSTER MASH</h3>
+
+            <img src="https://www.shutterstock.com/image-photo/monster-mash-halloween-lettering-logo-260nw-1490691794.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="240">
+
+            <p> Realiza un dibujo, dale volumen en 3D y anímalo. Ideal para niños. </p>
+            <a href="https://monstermash.zone/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>RANDOM FACE GENERATOR</h3>
+
+            <img src="https://user-images.githubusercontent.com/97734029/213933336-bfdf39bd-e4c5-4c6a-b0ad-0846456b11a2.png" alt="Imagen" style="float: left; margin-right: 20px;" width="260">
+
+            <p> Genera una cara humana de una persona que no existe, con las características de género, edad y etnia que elijas. </p>
+            <a href="https://this-person-does-not-exist.com/es">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>SIMPLIFIED</h3>
+
+            <img src="https://logowik.com/content/uploads/images/simplified2067.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="120">
+
+            <p> Crea publicaciones para redes sociales con ayuda de herramientas de Inteligencia Artificial que te permiten generar textos, crear y editar imágenes, crear guiones de videos y mucho más. </p>
+            <a href="https://simplified.com/ai-tools">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>ANIMATED DRAWINGS</h3>
+
+            <img src="https://vanengenclass.weebly.com/uploads/6/3/1/5/6315583/screen-shot-2022-05-09-at-11-25-06-am_orig.png" alt="Imagen" style="float: left; margin-right: 20px;" width="80">
+
+            <p> Dale vida a los dibujos de los niños. Solo debes subir la fotografía, agregarle un esqueleto y animarlo. </p>
+            <a href="https://sketch.metademolab.com/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>REMOVE BACKGROUND</h3>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIsRUw-1VUufRtoq4yPf8Tgp0Hwp6jGd57hxghm4gcmA&s" alt="Imagen de un gato" style="float: left; margin-right: 20px;" width="65">
+
+            <p> Elimina el fondo de tus imágenes. </p>
+            <a href="https://express.adobe.com/es-ES/tools/remove-background">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>CUTOUT.PRO</h3>
+
+            <img src="https://aitoolsinfo.com/media/2023/05/cutout-pro-scaled.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="120">
+
+            <p> Mejora tus imágenes y videos, elimina objetos que no quieras que aparezcan en ellos, convierte fotos en caricaturas, genera arte digital y mucho más. </p>
+            <a href="https://www.cutout.pro/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>AI IMAGE ENLARGER</h3>
+
+            <img src="https://de.colormango.com/photo-graphic-design/boxshot/ai-image-enlarger_151436.png" alt="Imagen de un gato" style="float: left; margin-right: 20px;" width="65">
+
+            <p> Mejora y agranda tus imágenes sin perder calidad. </p>
+            <a href="https://imglarger.com/es">Acceder</a>
+        </div>
+
+
+        <div class="imagenes-ai">
+            <h2>Imágenes creadas con IA</h2>
+            <style>
+                .imagenes-ai {
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                }
+
+                .imagen {
+                    display: none;
+                }
+
+                    .imagen img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+            </style>
+            <div class="imagen">
+                <img src="https://i.blogs.es/04d543/midjourney/1366_521.jpeg" alt="Imagen creada con IA">
+            </div>
+            <div class="imagen">
+                <img src="https://i.blogs.es/c65b3b/stable-difussion-1/1366_2000.jpeg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://cflvdg.avoz.es/sc/fXpLmV9lC0IhGU4nbXj5-qJkWrU=/1280x/2023/01/22/00121674405893986976447/Foto/Midj2.jpg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://wwwhatsnew.com/wp-content/uploads/2022/09/StockAI.jpg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://www.educaciontrespuntocero.com/wp-content/uploads/2023/05/Herramientas-ia.jpg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://curtonews.com/wp-content/wp-uploads/2024/04/ff2c035e-82de-4c8d-a648-c1f5a74e4db6-aspect-ratio-930-440.jpeg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://s1.elespanol.com/2023/01/03/elandroidelibre/noticias-y-novedades/730937500_229924846_1706x960.jpg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://www.adslzone.net/app/uploads-adslzone.net/2023/04/image-creato-bing.jpg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://i.blogs.es/53ee09/pintura-ia/1366_2000.jpg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://elemmental.com/wp-content/uploads/2018/08/google-dream-starry-night-1024x811-e1534946965903.jpg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://e.rpp-noticias.io/large/2022/09/06/170317_1310112.jpg" alt="Imagen creada con AI">
+            </div>
+
+            <div class="imagen">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqhetGjx0WtJhi6C40ZWtPJEadsLLrz-HsBjhfE_XhdANAWOeZy8prlG_RS7YioWyhHENkQ5jDIrxHTK5er7-P6lEyGgd6nD18RuBLp0tY77ph70-UWo55VWj7mf3UPBMcAozwkXT4z92_1SxXS4yWwLPsKaNvSYftDVamrWaXTdTuvapqX36ufshiUw/s1024/Intelig%C3%AAncia%20Artificial%20como%20Arte%20%E2%80%93%20O%20que%20a%20Filosofia%20da%20Arte%20pode%20oferecer%20ao%20entendimento%20da%20IA%20e%20da%20Consci%C3%AAncia.jpg" alt="Imagen creada con AI">
+            </div>
+
+            <script>
+                function scrollToExamples(id) {
+                    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            </script>
+            <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        let index = 0;
+                        const imagenes = document.querySelectorAll('.imagen');
+
+                        function mostrarImagenes() {
+                            imagenes.forEach((imagen) => {
+                                imagen.style.display = 'none';
+                            });
+                            index++;
+                            if (index > imagenes.length) { index = 1; }
+                            imagenes[index - 1].style.display = 'block';
+                            setTimeout(mostrarImagenes, 3000); // Cambia la imagen cada 3 segundos (3000 milisegundos)
+                        }
+
+                        mostrarImagenes();
+                    });
+            </script>
+
+        </div>
+
+
+
+    </div>
+
+    <div id="edicion-video" class="ejemplos">
+        <h2>EDICIÓN DE VIDEO</h2>
+
+        <div class="ejemplos">
+            <h3>HEYGEN</h3>
+
+            <img src="https://i0.wp.com/vektra374.com/wp-content/uploads/2023/09/HeyGen-IA-2.png?fit=925%2C558&ssl=1" alt="Imagen" style="float: left; margin-right: 20px;" width="130">
+
+            <p> Crea videos con avatares generados por IA. Incluye un minuto de video gratis, pero por cada amigo que invites y realice un video, obtienes un minuto adicional. </p>
+            <a href="https://app.heygen.com/login?cid=999c68de">Acceder</a>
+        </div>
+
+
+
+        <div class="ejemplos">
+            <h3>PIKA LABS</h3>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX80SvM3qgVeeqP-_XQelib23tySvVsHzH2Q616d0J8w&s" alt="Imagen" style="float: left; margin-right: 20px;" width="140">
+
+            <p>
+                Pika Labs AI es una herramienta innovadora para aquellos que desean adentrarse en la creación de contenido de video sin enfrentarse a la engorrosa edición tradicional. Permite que tus ideas cobren vida a través de animaciones generadas a partir de simples textos.
+            </p>
+            <a href="https://pikalabsai.org/">Acceder</a>
+        </div>
+
+
+        <div class="ejemplos">
+            <h3>VIZARD</h3>
+
+            <img src="https://vizard.co/wp-content/uploads/2019/09/Vizard-Logo-new.png" alt="Imagen" style="float: left; margin-right: 20px;" width="150">
+
+            <p>
+                Genera clips cortos de video a partir de un video largo o la grabación de una videoconferencia.
+            </p>
+            <a href="https://vizard.ai/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>PICTORY</h3>
+
+            <img src="https://media.licdn.com/dms/image/C4E0BAQF8gkpWJHFm-w/company-logo_200_200/0/1650629023337/pictory_logo?e=2147483647&v=beta&t=laAeLE42_m6et9iF2ydSNJb8KcuFoYhwFwwFPr13_Us" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+            <p> Pictory es un generador de video de IA que le permite crear y editar fácilmente videos de alta calidad. Uno de los mejores aspectos de la herramienta es que no necesitas experiencia en edición o diseño de videos. </p>
+            <a href="https://pictory.ai/?el=2000&htrafficsource=pictoryblog">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>INVIDEO AI</h3>
+
+            <img src="https://media.licdn.com/dms/image/D4D12AQFEdafVUXfB2A/article-cover_image-shrink_600_2000/0/1696885057847?e=2147483647&v=beta&t=1_A9NisdMV67qe4gLJjeGH6j35x-GbhntlUPLjUuEjI" alt="Imagen" style="float: left; margin-right: 20px;" width="180">
+
+            <p> Invideo AI es la primera herramienta de generación de videos de IA online de tu tipo. Puedes utilizarlo para crear primeros cortes para cualquier idea de video simplemente ingresando la idea. </p>
+            <a href="https://invideo.io/make/ai-video-generator/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>VEED.IO</h3>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW0gnsC1ajz5H_U-tiH4GpruDxghbziwxORn6jDfbe9Q&s" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+            <p> Veed io es una plataforma de edición y producción de vídeo en línea que te permite crear y editar vídeos de forma rápida y sencilla. Veed io ofrece una amplia gama de herramientas y funciones para mejorar tus vídeos con efectos, transiciones, superposiciones de texto y otros elementos creativos. </p>
+            <a href="https://www.veed.io/es-ES/herramientas/video-ai">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>ADOBE PREMIERE PRO</h3>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/1200px-Adobe_Premiere_Pro_CC_icon.svg.png" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+            <p> Adobe Premiere Pro es un software de edición de vídeo que utiliza funciones basadas en IA para mejorar la calidad de tus contenidos de vídeo. El software utiliza IA para automatizar el proceso de edición, lo que le permite centrarse en los aspectos creativos de su proyecto. Las funciones de IA incluyen plantillas de gráficos en movimiento, edición automatizada y corrección del color. </p>
+            <a href="https://www.adobe.com/products/premiere/edit-audio.html">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>LUMEN5</h3>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpGmDt9XDiSpt9RoZLlV2qK7Ay1vdbdchcpA&usqp=CAU" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+            <p> Lumen5 es una herramienta de creación de vídeo basada en IA que te permite crear vídeos de alta calidad a partir de las entradas de tu blog u otros contenidos escritos. El software utiliza IA para analizar su contenido y genera automáticamente un guión de vídeo, que puede editar y personalizar. Lumen5 también ofrece una gama de plantillas de vídeo y material de archivo para ayudarte a crear vídeos atractivos. </p>
+            <a href="https://lumen5.com/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>SYNTHESIA</h3>
+
+            <img src="https://asset.brandfetch.io/id0UsldsFb/id4OzH-QYD.jpeg" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+            <p> Con Synthesia puedes crear vídeos a partir de documentos, PowerPoints o PDFs. Ofrecen soluciones para crear vídeos de formación, tutoriales y vídeos de marketing. Para dar un aspecto realista a sus vídeos, Synthesia usa avatares virtuales que son gemelos digitales de actores reales, incluida la voz. Puedes escoger un avatar de IA exclusivo para tu marca o incluso crear uno a medida. </p>
+            <a href="https://www.synthesia.io/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>MUSE.AI</h3>
+
+            <img src="https://media.licdn.com/dms/image/D4D0BAQEPbw4G5CH4JQ/company-logo_200_200/0/1705947634091/muse_ai_logo?e=2147483647&v=beta&t=WX1MfIIwBJ3f8kX5ordr06UcIg_QPhnpHuFGT-KYqRg" alt="Imagen" style="float: left; margin-right: 20px;" width="80">
+
+            <p> Esta solución de vídeo marketing incluye múltiples funcionalidades, como alojar audio y vídeo, indexar y buscar vídeos por IA o usar plantillas personalizables. Es utilizada por organizaciones destacadas como la Universidad de Nueva York o el Festival de Edimburgo. </p>
+            <a href="https://muse.ai/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>RAW SHORTS</h3>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3hH6wKZwkznhz_BaASmekujWh_jv223owFLRzOLOJ6w&s" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+            <p>
+                Raw Shorts es una solución especializada en creación de vídeos animados que presume de reducir el tiempo dedicado a crear vídeos en un 87%. Su funcionamiento es muy sencillo: solo tienes que seleccionar una de las múltiples plantillas disponibles y editarla a tu gusto con texto y diferentes elementos animados.
+            </p>
+            <a href="https://www.rawshorts.com/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>ELAI</h3>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgkIV8G0E35gD6zCa2z5YmSOjDh4xvMTjOzUEL0GoQ9w&s" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+            <p>
+                Este generador de vídeos por IA cuenta con funcionalidades de creación de vídeos a partir de texto, plantillas, creación de avatares digitalizados y traducciones automáticas. También dispone de una herramienta para crear un vídeo a partir de un post de blog de manera muy sencilla. Está especialmente recomendado para crear contenidos de formación y vídeos de marketing.
+            </p>
+            <a href="https://elai.io/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>FLEXCLIP</h3>
+
+            <img src="https://pbs.twimg.com/profile_images/1362613469594357761/P0l1JFxE_400x400.png" alt="Imagen" style="float: left; margin-right: 20px;" width="120">
+
+            <p>
+                FlexClip es una herramienta de creación de vídeos con IA que parte de una amplia selección de plantillas listas para usar. Si lo que queremos es crear un contenido rápidamente, podemos hacerlo en segundos con tan solo cambiar el texto. Si queremos un resultado más personalizado, podemos elegir entre miles de imágenes o vídeos de stock para crear nuestros propios vídeos desde cero, o añadir nuestro propio contenido audiovisual.
+            </p>
+            <a href="https://www.flexclip.com/es/">Acceder</a>
+        </div>
+
+        <div class="ejemplos">
+            <h3>DESIGNS AI</h3>
+
+            <img src="https://sendsteps-cdn-bucket.s3.eu-central-1.amazonaws.com/website/medium_Designs_ai_logo_45587f95c8.png" alt="Imagen" style="float: left; margin-right: 20px;" width="120">
+
+            <p>
+                Esta herramienta de creación de vídeos con IA combina funciones de aprendizaje automático con una biblioteca de activos de gran calidad, que incluye 10 millones de vídeos de Getty y millones de imágenes. Sus funcionalidades incluyen una tecnología única para pasar textos a vídeo, sugerencias de contenido a partir de palabras clave y corte de escenas automático. Además, dispone de un editor muy intuitivo para crear tus vídeos directamente en el navegador.
+            </p>
+            <a href="https://designs.ai/es">Acceder</a>
+        </div>
+
+            <h1>GUÍA PARA CREAR VIDEOS CON IA</h1>
+
+            <!-- Video -->
+            <video width="640" height="360" controls>
+                <source src="Video2.mp4" type="video/mp4">
+            </video>
+
+    </div>
+
+    <div id="edicion-audio" class="ejemplos">
+        <h2>EDICIÓN DE AUDIO</h2>
+        <div class="ejemplo">
+
+            <div class="ejemplos">
+                <h3>SPEECHNOTES</h3>
+
+                <img src="https://speechnotes.co/android-chrome-512x512.png" alt="Imagen" style="float: left; margin-right: 20px;" width="60">
+
+                <p> Escribe lo que le dictes, también puedes subir un archivo de audio y convertirlo en texto. </p>
+                <a href="https://speechnotes.co/es/">Acceder</a>
+            </div>
+
+
+            <div class="ejemplos">
+                <h3>SPEECHIFY</h3>
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Speechify_Icon.png" alt="Imagen" style="float: left; margin-right: 20px;" width="70">
+
+                <p> Convierte cualquier texto, artículo, PDF, e-mail, etc. en audio. </p>
+                <a href="https://speechify.com/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>TTSMAKER</h3>
+
+                <img src="https://play.ht/blog/wp-content/uploads/2024/04/ttsmaker-icon.webp" alt="Imagen" style="float: left; margin-right: 20px;" width="70">
+
+                <p> Convierte texto a voz, puedes usarlo para leer texto y libros electrónicos en voz alta, además de que se puede descargar el archivo de audio. </p>
+                <a href="https://ttsmaker.com/es">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>MURF.AI</h3>
+
+                <img src="https://recursos.ai/content/images/2023/05/Murf.ai.png" alt="Imagen" style="float: left; margin-right: 20px;" width="170">
+
+                <p> Convierte texto en voz para generar locuciones profesionales. </p>
+                <a href="https://murf.ai/">Acceder</a>
+            </div>
+
+
+            <div class="ejemplos">
+                <h3>NARAKEET</h3>
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2CXtECeFsK4ov3dH3QFsFLXd1g184E6SZfd5KpMncjg&s" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+                <p> Narakeet es un convertidor de texto que te ayuda a crear audio usando la inteligencia artificial. Con esta herramienta, puedes generar una voz sintética para tu contenido de texto, lo que te permite crear un contenido de audio de alta calidad sin tener que grabarlo tú mismo. </p>
+                <a href="https://www.narakeet.com/create/es-creador-de-voz-con-ia.html">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>SPEECHGEN</h3>
+
+                <img src="https://speechgen.io/img/speechgen_fb_pic.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="170">
+
+                <p> Convierte texto a voz con modernas voces de inteligencia artificial. Utilízalo para el trabajo, edición de vídeo, negocios, publicidad, redes sociales, entretenimiento y mucho más. </p>
+                <a href="https://speechgen.io/es/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>CLIPCHAMP</h3>
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Microsoft_Clipchamp.webp/460px-Microsoft_Clipchamp.webp.png" alt="Imagen" style="float: left; margin-right: 20px;" width="60">
+
+                <p> Crea narraciones realistas que se adapten a tu vídeo con el generador de texto a voz con IA. </p>
+                <a href="https://clipchamp.com/es/features/ai-voice-over-generator/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>LOVO</h3>
+
+                <img src="https://media.licdn.com/dms/image/C560BAQHkIJEFiVynQg/company-logo_200_200/0/1673315124822/lovoai_logo?e=2147483647&v=beta&t=OnoHGmjb_dOWwvOvoExTZfrgbFhAnSkHSfk55MlIe9I" alt="Imagen" style="float: left; margin-right: 20px;" width="80">
+
+                <p> Lovo.ai es un distinguido generador de voz y plataforma de conversión de texto a voz basado en inteligencia artificial, aclamado por su interfaz fácil de usar y la producción de voces que imitan fielmente el habla humana. </p>
+                <a href="https://lovo.ai/?lmref=aQMezw">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>FLIKI</h3>
+
+                <img src="https://ingresosconia.com/wp-content/uploads/2023/07/fliki.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="150">
+
+                <p>
+                    Fliki transforma el proceso de creación de contenido de audio y vídeo en una tarea sin esfuerzo, similar a una simple escritura, a través de su editor basado en guiones. Con esta herramienta, puedes crear rápidamente videos con voces en off realistas, todo impulsado por tecnología de inteligencia artificial.
+                </p> <a href="https://fliki.ai/?via=uniteai">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>PLAY.HT</h3>
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQksmtJXPiwQT9TLjZpZ1F9-Z85LgYGwjVoyM7lHHdWEg&s" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+                <p>
+                    Play.ht se destaca como un generador avanzado de texto a voz con IA, que utiliza tecnología de punta de gigantes de la industria como IBM, Microsoft, Amazon y Google para producir audio y voces. Esta herramienta se destaca en la transformación de texto en voces con sonido natural, ofreciendo la conveniencia de descargar las locuciones generadas en formatos MP3 y WAV.
+                </p> <a href="https://fliki.ai/?via=uniteai">Acceder</a>
+            </div>
+
+
+            <div class="ejemplos">
+                <h3>SONIX</h3>
+
+                <img src="https://cdn-1.webcatalog.io/catalog/sonix/sonix-icon-filled-256.webp?v=1675592949701" alt="Imagen" style="float: left; margin-right: 20px;" width="80">
+
+                <p>
+                    Sonix es un software de transcripción, traducción y resumen basado en IA. Es el mejor software de IA para transcripción por su alto índice de precisión y su interfaz fácil de usar. Sus algoritmos de IA están diseñados específicamente para la transcripción de voz a texto.
+
+                </p>
+                <a href="https://sonix.ai/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>AUPHONIC</h3>
+
+                <img src="https://auphonic.com/media/pics/auphonic-app-icon.png" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+                <p>
+                    Auphonic es una herramienta basada en IA que te ayuda a mejorar la calidad de tus contenidos de audio. El software utiliza IA para ajustar automáticamente los niveles de volumen, reducir el ruido de fondo y mejorar la calidad general del sonido de tus grabaciones de audio. Auphonic también ofrece una serie de herramientas de edición que te permiten ajustar el contenido de audio antes de exportarlo.
+
+                </p>
+                <a href="https://auphonic.com/">Acceder</a>
+            </div>
+
+
+            <div class="ejemplos">
+                <h3>IBM WATSON</h3>
+
+                <img src="https://static.wikia.nocookie.net/logopedia/images/a/ac/IBM_Watson_old.png/revision/latest?cb=20210515144526" alt="Imagen" style="float: left; margin-right: 20px;" width="110">
+
+                <p>
+                    IBM Watson es un conjunto de herramientas basadas en IA desarrolladas por IBM para diversas aplicaciones, incluido el procesamiento de audio y vídeo. Watson ofrece funciones como la transcripción de voz a texto, el procesamiento del lenguaje natural y el análisis de sentimientos. También puede utilizarse para el procesamiento de vídeo, incluido el análisis de contenido de vídeo para el reconocimiento de objetos, la detección de escenas y el reconocimiento de emociones.
+
+                </p>
+                <a href="https://www.ibm.com/watson">Acceder</a>
+            </div>
+        </div>
+
+    </div>
+    <div id="presentaciones" class="ejemplos">
+        <h2>PRESENTACIONES Y HERRAMIENTAS ÚTILES</h2>
+        <div class="ejemplo">
+
+            <div class="ejemplos">
+                <h3>PREZI</h3>
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Prezi_logo_transparent_2012.svg/1024px-Prezi_logo_transparent_2012.svg.png" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+                <p>
+                    Prezi es un software de presentaciones basado en la nube que permite a los usuarios crear presentaciones cautivadoras utilizando su plataforma impulsada por IA. Ofrece varias funciones, como plantillas personalizadas, animaciones en 3D y análisis avanzados para mejorar el atractivo visual y el compromiso de las presentaciones.
+                </p> <a href="https://prezi.com/es/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>SENDSTEPS</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlItzkYtViLl0gvrjdrMZNbYntStL9lHHobHPi6ZhZwg&s" alt="Imagen" style="float: left; margin-right: 20px;" width="70">
+
+                <p>
+                    Cuando utilices Sendsteps.ai para crear una presentación con IA, tienes dos cómodas opciones: 'Documento a presentación' y 'Texto a presentación'.
+                </p> <a href="https://www.sendsteps.com/es/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>SLIDEBOT</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd7yV3WX94inIQaZ8g7qFmiMD9eMf9Lf3hzabu16RLrA&s" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+                <p>
+                    SlideBot es una herramienta de presentación impulsada por IA que transforma tu texto en bruto en impresionantes presentaciones visuales. Utiliza IA para analizar tu contenido y crear las diapositivas perfectas con animaciones y gráficos en segundos.
+                </p> <a href="https://good-design.org/projects/slidebot-presentation-design-tool/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>EMAZE</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOVG9VIVyJ6PTdAKPDzip0wmsWnI7IKhvWwGLn5TwWkA&s" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+                <p>
+                    Emaze es una plataforma impulsada por IA que permite a los usuarios crear presentaciones visualmente impresionantes, incluyendo 3D y VR, fácilmente. Ofrece una amplia gama de plantillas, animaciones y fuentes para personalizar tu presentación según tus necesidades.
+                </p> <a href="https://prezi.com/es/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>ZOHO SHOW</h3>
+                <img src="https://play-lh.googleusercontent.com/CCav4GvbawKnXIEWpyu0bn10k7xBTGaoZTodUlDmREKD7WhFb-bzI-uR7aPYnkR6-g" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+                <p>
+                    Zoho Show es una herramienta de presentación impulsada por IA que facilita la creación, el intercambio y la colaboración de presentaciones sin complicaciones. Ofrece funciones como la coautoría en tiempo real, la vinculación dinámica de datos y la presentación remota para mejorar la eficacia de sus presentaciones de ventas.
+                </p> <a href="https://www.zoho.com/es-xl/show/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>KROMA</h3>
+                <img src="https://media.licdn.com/dms/image/C4D0BAQHySXPVJlT0Mg/company-logo_200_200/0/1630580457095/slideshop_com_logo?e=2147483647&v=beta&t=tftGmj2vO7qKhSZ1B4UWqqxf0LeL-KLZE_eqpmKGbuo" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+
+                <p>
+                    Kroma es una popular herramienta de presentación de IA utilizada por grandes organizaciones como Apple y eBay. Le brinda acceso a más de un millón de activos creativos y numerosos elementos de visualización de datos, lo que le permite crear una presentación visualmente impactante. Ya sea que esté presentando datos, compartiendo una actualización de proyecto o lanzando una nueva idea, Kroma puede ayudarlo a hacerlo.
+                </p> <a href="https://kroma.ai/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>SIMPLIFIED</h3>
+                <img src="https://play-lh.googleusercontent.com/f2MQVml_ROc-hF0hsT13VPF8yTsi1UmFIlOtHBCALHrO7aIUT9uMAYNaTZ6z7_xyJrPp" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+                <p>
+                    Simplified es un creador de presentaciones de IA diseñado pensando en la colaboración. Permite que los equipos trabajen juntos sin problemas, creando presentaciones con la ayuda de IA. Esto significa que puede colaborar con su equipo en tiempo real, realizar cambios y ver actualizaciones al instante.
+                </p> <a href="https://simplified.com/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>TOME</h3>
+                <img src="https://cdn-1.webcatalog.io/catalog/tome/tome-icon-filled-256.png?v=1675593545205" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+                <p>
+                    Tome es un creador de presentaciones impulsado por IA que va más allá del diseño de diapositivas. Sirve como un asistente colaborativo de IA, que ayuda a los usuarios a diseñar presentaciones atractivas desde cero. Usando la tecnología ChatGPT y DALL-E 2 de OpenAI, Tome puede comprender sus necesidades y generar contenido que resuene con su audiencia.
+                </p> <a href="https://tome.app/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>SLIDEBEAN</h3>
+                <img src="https://yt3.googleusercontent.com/4vm2ENt47RdHFL4JIzftFCWps_mRYQBzzCaRM7_y3_xcdi-K7ie_PLSj4V4DHLJsxLztcJXf3w=s900-c-k-c0x00ffffff-no-rj" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+
+                <p>
+                    Slidebean es una herramienta de presentación basada en la web que revoluciona la forma en que se realizan las presentaciones. Con solo unos pocos clics, los usuarios pueden crear presentaciones impactantes que dejan una impresión duradera. La belleza de Slidebean radica en su capacidad para separar la creación de contenido del diseño de diapositivas.
+                </p> <a href="https://slidebean.com/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>BEAUTIFUL.AI</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUqQceVkb2DX8SQwRw30YIH7d7MsiFbKSN9G4pmxFH7w&s" alt="Imagen" style="float: left; margin-right: 20px;" width="90">
+                <p>
+                    Beautiful.ai es más que una simple herramienta de presentación; es un asistente inteligente que te ayuda a crear narrativas convincentes. A medida que comienza a personalizar su presentación, Beautiful.ai comienza a comprender sus necesidades y ofrece sugerencias para mejoras adicionales. Esta función predictiva cambia las reglas del juego, ya que hace que el proceso de diseño sea más intuitivo y consuma menos tiempo.
+                </p> <a href="https://www.beautiful.ai/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>GUIDDE</h3>
+                <img src="https://striking-kindness-e0d93214bb.media.strapiapp.com/Guidde_s_minimalist_logo_993579cc1b.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="65">
+
+                <p>
+                    Crea increíbles tutoriales de aplicaciones web en segundos.
+                </p> <a href="https://www.guidde.com/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>CURIPOD</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUDrM--yfBMWOYUNaVzDvB7t3mSSW5GbM6Zl-DmD6DRQ&s" alt="Imagen" style="float: left; margin-right: 20px;" width="70">
+                <p>
+                    Crea lecciones interactivas en segundos con ayuda de la Inteligencia Artificial.
+                </p> <a href="https://curipod.com/generators/Full-lesson/g/753d7c32-4f9b-42bf-bb53-12419c28425d">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>SCRIBEHOW</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLvROmg8FZwi_cF1gHfxfEe3kyDSevfAJXU7AqhgpI4Q&s" alt="Imagen" style="float: left; margin-right: 20px;" width="60">
+                <p>
+                    Convierte cualquier proceso en una guía paso a paso instantáneamente.
+                </p> <a href="https://scribehow.com/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>SCISPACE</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNKvzCRtE-O8fl4kg_v1R16OShSKlVnpbIdNJvJeYaBw&s" alt="Imagen" style="float: left; margin-right: 20px;" width="65">
+                <p>
+                    Un asistente para la literatura científica, brinda explicaciones de artículos, responde preguntas y simplifica el lenguaje técnico.
+                </p> <a href="https://chromewebstore.google.com/detail/scispace-do-hours-of-rese/cipccbpjpemcnijhjcdjmkjhmhniiick?pli=1">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>CONKER</h3>
+                <img src="https://cdn-1.webcatalog.io/catalog/conker/conker-icon-filled-256.png?v=1700129178701" alt="Imagen" style="float: left; margin-right: 20px;" width="70">
+                <p>
+                    Genera preguntas a partir de un tema o un texto. Las preguntas se pueden exportar a Google Forms en un clic.
+                </p> <a href="https://www.conker.ai/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>MONIC</h3>
+                <img src="https://media.licdn.com/dms/image/D4E0BAQFlURiD1QS-Ig/company-logo_200_200/0/1667440280731/monic_ai_logo?e=2147483647&v=beta&t=vHpkCoLWk1s9fOPfYoSpySZDri2PaRCJaqBFgKjqZSM" alt="Imagen" style="float: left; margin-right: 20px;" width="60">
+                <p>
+                    Convierte tus textos, presentaciones y artículos en fichas de estudio y ejemplos de exámenes.
+                </p> <a href="https://beta.monic.ai/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>QUESTIONWELL</h3>
+                <img src="https://pbs.twimg.com/profile_images/1637520944854978560/86bIG4px_400x400.jpg" alt="Imagen" style="float: left; margin-right: 20px;" width="80">
+                <p>
+                    Genera preguntas alineadas a objetivos de aprendizaje, a partir de un texto o tema. Las preguntas se pueden exportar a múltiples formatos, tales como Google Forms, Kahoot, Moodle, entre otros.
+                </p> <a href="https://app.questionwell.org/">Acceder</a>
+            </div>
+
+
+            <div class="ejemplos">
+                <h3>FORMATIVE</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMtbYql_xesvcExMl9_kOYMqXCmon5ANdFn_BTSkLimA&s" alt="Imagen" style="float: left; margin-right: 20px;" width="65">
+                <p>
+                    Genera instantáneamente preguntas, lecciones, sugerencias, tareas y mucho más.
+                </p> <a href="https://es.formative.com/">Acceder</a>
+            </div>
+
+
+            <div class="ejemplos">
+                <h3>PARLAY</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKsl0UoLTpdyMX25yyEoPdNwz86lHsnK3xdeTafoXQAA&s" alt="Imagen" style="float: left; margin-right: 20px;" width="65">
+                <p>
+                    Crea mesas de discusión escritas y orales para que tus alumnos debatan sobre diferentes temas.
+                </p> <a href="https://parlayideas.com/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>SELECTEXT</h3>
+                <img src="https://lh3.googleusercontent.com/MIv7AJwqKy1oZHTyYN-v_KPzZ1VDIoQHX9lk6bEGE8Eje147ehPv71XWFJHhwr_zXI6UkupJuiGEr7ePx5G9_vF9vg=s128-rj-sc0x00ffffff" alt="Imagen" style="float: left; margin-right: 20px;" width="70">
+                <p>
+                    Copia texto directamente de los videos.
+                </p> <a href="https://selectext.app/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>GPT GENIE</h3>
+                <img src="https://i.ytimg.com/vi/NNhfdFdJTmA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBEgcigkMA8=&rs=AOn4CLBhAgnCIHtus2CzveRIzhu8U_hl4g" alt="Imagen" style="float: left; margin-right: 20px;" width="110">
+                <p>
+                    Utiliza ChatGPT directamente en hojas de cálculo de Google Sheets.
+                </p> <a href="https://workspace.google.com/marketplace/app/gpt_genie/1062739279834">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>WOLFRAM ALPHA</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo-O8Dg392AOJvt594rWJ6xVofpYGXwB947BNAAlcP6Q&s" alt="Imagen" style="float: left; margin-right: 20px;" width="100">
+                <p>
+                    Proporciona respuestas detalladas y específicas a los conceptos introducidos en su motor de búsqueda, en las áreas de matemáticas, ciencia y tecnología, sociedad y cultura, vida cotidiana.
+                </p> <a href="https://www.wolframalpha.com/">Acceder</a>
+            </div>
+
+            <div class="ejemplos">
+                <h3>KRISP</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNvHqJtgsO8DeXHU_BSI5z1NPjNT0vqYQaH3GRqpzGrA&s" alt="Imagen" style="float: left; margin-right: 20px;" width="70">
+                <p>
+                    Disminuye el ruido de tus videoconferencias y toma notas de tus reuniones.
+                </p> <a href="https://krisp.ai/">Acceder</a>
+            </div>
+
+        </div>
+
+    </div>
+        <div class="arrow-up">
+            <a href="#gif-portada"><img src="https://cdn-icons-png.flaticon.com/512/5548/5548511.png" alt="Volver arriba"></a>
+        </div>
+
+        <footer style="text-align: center; background-color: #6549d3; color: white; padding: 20px;">
+            <p style="font-size: 14px; margin: 0;">
+                © 2024 AI CONNECT. Todos los derechos reservados. <br>
+                Diseñado por Victoria Furtuna.
+
+                Licencia <a href="https://creativecommons.org/licenses/by-nc-sa/2.5/es/" style="color: white;">CC BY-NC-SA 4.0</a>.
+            </p>
+        </footer>
+
+    </body>
+</html>
